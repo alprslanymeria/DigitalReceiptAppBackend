@@ -1,1 +1,14 @@
-<Solution />
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/API/">
+    <Project Path="src/API/App.API/App.API.csproj" />
+  </Folder>
+  <Folder Name="/src/core/">
+    <Project Path="src/core/App.Application/App.Application.csproj" />
+    <Project Path="src/core/App.Domain/App.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/infastructure/">
+    <Project Path="src/infastructure/App.Persistence/App.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/test/" />
+</Solution>
