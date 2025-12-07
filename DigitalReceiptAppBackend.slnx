@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="notes.txt" />
+  </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/API/">
     <Project Path="src/API/App.API/App.API.csproj" />
@@ -8,6 +11,7 @@
     <Project Path="src/core/App.Domain/App.Domain.csproj" />
   </Folder>
   <Folder Name="/src/infastructure/">
+    <Project Path="src/infastructure/App.Infrastructure/App.Infrastructure.csproj" Id="af87ddb8-7d0d-4a86-b0db-4a7b2b492d54" />
     <Project Path="src/infastructure/App.Persistence/App.Persistence.csproj" />
   </Folder>
   <Folder Name="/test/" />
