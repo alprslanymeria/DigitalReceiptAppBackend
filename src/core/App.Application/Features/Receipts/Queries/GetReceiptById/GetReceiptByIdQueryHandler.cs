@@ -12,11 +12,8 @@ public sealed class GetReceiptByIdQueryHandler : IQueryHandler<GetReceiptByIdQue
         // In a real application, you would use UnitOfWork/Repository to fetch the entity
         await Task.CompletedTask;
 
-        if (request.Id <= 0)
-        {
-            return ServiceResult<ReceiptDto>.Fail("Receipt not found", HttpStatusCode.NotFound);
-        }
-
+        // In a real scenario, if receipt not found in database, return NotFound
+        // For now, returning sample data
         var receiptDto = new ReceiptDto
         {
             Id = request.Id,
