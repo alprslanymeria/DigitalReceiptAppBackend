@@ -1,9 +1,8 @@
 ﻿using Mapster;
 using MapsterMapper;
-using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace App.Infrastructure.Mapping;
+namespace App.API.Extensions;
 
 public static class MapsterExtension
 {
@@ -35,7 +34,7 @@ public static class MapsterExtension
         // ALLOW CALLER TO FURTHER TWEAK THE CONFIG
         configure?.Invoke(config);
 
-        // REGISTER CONFIG AND MAPPER IN DI
+        //// REGISTER CONFIG AND MAPPER IN DI
         services.AddSingleton(config);
         services.AddScoped<IMapper, ServiceMapper>();
 

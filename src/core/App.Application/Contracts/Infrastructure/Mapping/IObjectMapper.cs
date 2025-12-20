@@ -1,4 +1,4 @@
-﻿namespace App.Application.Contracts.Infrastructure;
+﻿namespace App.Application.Contracts.Infrastructure.Mapping;
 
 public interface IObjectMapper
 {
