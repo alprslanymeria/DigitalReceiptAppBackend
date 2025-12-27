@@ -57,10 +57,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\core\App.Application\App.Application.csproj" />
+    <ProjectReference Include="..\App.Shared\App.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Configurations\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

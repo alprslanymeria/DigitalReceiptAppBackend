@@ -1,12 +1,12 @@
 ﻿using App.Domain.Options;
-using App.Infrastructure.Security;
+using App.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace App.API.Extensions;
 
 public static class CustomTokenAuth
 {
-    public static IServiceCollection AddCustomTokenAuth(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddCustomTokenAuth(this IServiceCollection services, IConfiguration configuration )
     {
         services.AddAuthentication(options =>
         {
@@ -21,7 +21,7 @@ public static class CustomTokenAuth
             {
                 ValidIssuer = tokenOptions!.Issuer,
                 ValidAudience = tokenOptions.Audience[0],
-                IssuerSigningKey = SignService.GetSymetricKey(tokenOptions.SecurityKey),
+                IssuerSigningKey = SignService.GetSymmetricKey(tokenOptions.SecurityKey),
 
                 ValidateIssuerSigningKey = true,
                 ValidateLifetime = true,

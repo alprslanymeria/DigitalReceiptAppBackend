@@ -11,8 +11,12 @@
     <Project Path="src/core/App.Domain/App.Domain.csproj" />
   </Folder>
   <Folder Name="/src/infastructure/">
-    <Project Path="src/infastructure/App.Infrastructure/App.Infrastructure.csproj" Id="af87ddb8-7d0d-4a86-b0db-4a7b2b492d54" />
+    <Project Path="src/infastructure/App.Caching/App.Caching.csproj" Id="68b1e37b-d9b9-4767-8cc3-c7be286708ef" />
+    <Project Path="src/infastructure/App.Observability/App.Observability.csproj" Id="080ef8b9-3f21-41dd-a8fb-5fbe187226e2" />
     <Project Path="src/infastructure/App.Persistence/App.Persistence.csproj" />
+    <Project Path="src/infastructure/App.Security/App.Security.csproj" Id="16284bb3-22b8-4582-b1e1-89e9a348fa82" />
+    <Project Path="src/infastructure/App.Shared/App.Shared.csproj" Id="935b1791-5167-4d50-9573-3abdbe6a3622" />
+    <Project Path="src/infastructure/App.Storage/App.Storage.csproj" Id="8c438d87-1046-4f67-a50b-e574ad32720e" />
   </Folder>
   <Folder Name="/test/" />
 </Solution>

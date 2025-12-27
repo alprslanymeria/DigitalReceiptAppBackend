@@ -11,11 +11,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Common\CacheKeys\" />
+    <Folder Include="Contracts\Persistence\Repositories\" />
     <Folder Include="Features\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.1" />
   </ItemGroup>
 
 </Project>

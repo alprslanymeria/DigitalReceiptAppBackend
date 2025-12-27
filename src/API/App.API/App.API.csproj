@@ -22,8 +22,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\core\App.Application\App.Application.csproj" />
-    <ProjectReference Include="..\..\infastructure\App.Infrastructure\App.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\infastructure\App.Caching\App.Caching.csproj" />
+    <ProjectReference Include="..\..\infastructure\App.Observability\App.Observability.csproj" />
     <ProjectReference Include="..\..\infastructure\App.Persistence\App.Persistence.csproj" />
+    <ProjectReference Include="..\..\infastructure\App.Security\App.Security.csproj" />
+    <ProjectReference Include="..\..\infastructure\App.Storage\App.Storage.csproj" />
   </ItemGroup>
 
 </Project>
