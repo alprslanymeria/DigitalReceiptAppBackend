@@ -57,7 +57,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\core\App.Application\App.Application.csproj" />
-    <ProjectReference Include="..\App.Shared\App.Shared.csproj" />
+    <ProjectReference Include="..\..\shared\App.Shared\App.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,6 +3,11 @@ using App.API.Extensions;
 using App.API.Filters;
 using App.API.Middlewares;
 using App.Application;
+using App.Caching;
+using App.Integration.ExternalApi;
+using App.Integration.Mapping;
+using App.Observability;
+using App.Storage;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
@@ -10,20 +15,23 @@ using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 // OPEN TELEMETRY
-builder.AddOpenTelemetryLog();
+builder.AddOpenTelemetryLogExt();
 
 // SERVICES
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services
-    .AddRepositories(builder.Configuration)
-    .AddOpenTelemetryExtension(builder.Configuration)
-    .AddMapster()
-    .AddCustomTokenAuth(builder.Configuration)
-    .AddOptionsPattern(builder.Configuration)
-    .AddCaching()
-    .AddStorage()
-    .AddApplicationServices();
+    .AddPersistenceServicesExt(builder.Configuration)
+    .AddOpenTelemetryServicesExt(builder.Configuration)
+    .AddCachingServicesExt(builder.Configuration)
+    .AddStorageServicesExt()
+    .AddMappingServicesExt()
+    .AddCustomTokenAuthExt(builder.Configuration)
+    .AddOptionsPatternExt(builder.Configuration)
+    .AddApplicationServicesExt()
+    .AddExternalApiServicesExt(builder.Configuration)
+    .AddApiVersioningExt()
+    .AddRateLimitingExt();
 
 // EXCEPTION HANDLERS
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
@@ -50,6 +58,7 @@ if (app.Environment.IsDevelopment())
 // MIDDLEWARES
 app.UseExceptionHandler(x => { });
 app.UseHttpsRedirection();
+app.UseRateLimiter();
 app.UseMiddleware<RequestAndResponseActivityMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();

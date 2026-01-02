@@ -7,22 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.1" />
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.1" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
-    <PackageReference Include="Mapster.DependencyInjection" Version="9.0.0-pre01" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
     <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="3.0.1" />
-    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.14.0" />
     <PackageReference Include="SharpGrip.FluentValidation.AutoValidation.Mvc" Version="1.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\core\App.Application\App.Application.csproj" />
     <ProjectReference Include="..\..\infastructure\App.Caching\App.Caching.csproj" />
+    <ProjectReference Include="..\..\infastructure\App.Integration\App.Integration.csproj" />
     <ProjectReference Include="..\..\infastructure\App.Observability\App.Observability.csproj" />
     <ProjectReference Include="..\..\infastructure\App.Persistence\App.Persistence.csproj" />
     <ProjectReference Include="..\..\infastructure\App.Security\App.Security.csproj" />

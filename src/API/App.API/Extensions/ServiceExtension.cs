@@ -7,7 +7,7 @@ namespace App.API.Extensions;
 /// </summary>
 public static class ServiceExtension
 {
-    public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+    public static IServiceCollection AddApplicationServicesExt(this IServiceCollection services)
     {
 
         return services;

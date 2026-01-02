@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="notes.txt" />
+    <File Path="todo.txt" />
   </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/API/">
@@ -12,11 +13,14 @@
   </Folder>
   <Folder Name="/src/infastructure/">
     <Project Path="src/infastructure/App.Caching/App.Caching.csproj" Id="68b1e37b-d9b9-4767-8cc3-c7be286708ef" />
+    <Project Path="src/infastructure/App.Integration/App.Integration.csproj" Id="147ab871-147a-431f-9e34-4c3ef20cfa51" />
     <Project Path="src/infastructure/App.Observability/App.Observability.csproj" Id="080ef8b9-3f21-41dd-a8fb-5fbe187226e2" />
     <Project Path="src/infastructure/App.Persistence/App.Persistence.csproj" />
     <Project Path="src/infastructure/App.Security/App.Security.csproj" Id="16284bb3-22b8-4582-b1e1-89e9a348fa82" />
-    <Project Path="src/infastructure/App.Shared/App.Shared.csproj" Id="935b1791-5167-4d50-9573-3abdbe6a3622" />
     <Project Path="src/infastructure/App.Storage/App.Storage.csproj" Id="8c438d87-1046-4f67-a50b-e574ad32720e" />
+  </Folder>
+  <Folder Name="/src/shared/">
+    <Project Path="src/shared/App.Shared/App.Shared.csproj" Id="100ce9fd-7977-4e91-a2fe-b8dbc979ba97" />
   </Folder>
   <Folder Name="/test/" />
 </Solution>
