@@ -3,9 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace App.Application.Common;
 
-public class ServiceResult<T> where T : class
+public class ServiceResult<T>
 {
-    public T? Data { get; private set; }
+    public T? Data { get; init; }
     public List<string>? ErrorMessage { get; init; }
 
     // WE'LL USE THIS TO QUICKLY CHECK WHETHER THE OPERATION WAS SUCCESSFUL OR NOT IN OUR OWN INTERNAL IMPLEMENTATION.
