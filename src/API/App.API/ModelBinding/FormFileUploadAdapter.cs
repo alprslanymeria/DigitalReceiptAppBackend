@@ -1,4 +1,4 @@
-using App.Application.Contracts.Infrastructure.Files;
+﻿using App.Application.Contracts.Infrastructure.Files;
 
 namespace App.API.Adapters;
 
@@ -8,7 +8,7 @@ namespace App.API.Adapters;
 /// </summary>
 public class FormFileUploadAdapter(IFormFile formFile) : IFileUpload
 {
-    private readonly IFormFile _formFile = formFile ?? throw new ArgumentNullException(nameof(formFile));
+    private readonly IFormFile _formFile = formFile;
 
     public string FileName => _formFile.FileName;
 
