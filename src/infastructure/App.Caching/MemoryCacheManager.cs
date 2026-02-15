@@ -8,7 +8,7 @@ using Microsoft.Extensions.Primitives;
 namespace App.Caching;
 
 // singleton ICacheKeyManager (localKeyManager)
-// transient ICacheKeyStore , scoped olarak çalışır
+// transient ICacheKeyStore , scoped olarak çalisir
 
 // singleton IMemoryCache (memoryCache)
 

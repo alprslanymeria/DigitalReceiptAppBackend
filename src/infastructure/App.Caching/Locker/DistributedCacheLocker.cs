@@ -29,7 +29,7 @@ public class DistributedCacheLocker(
                 JsonSerializer.Serialize(TaskStatus.Canceled),
                 new DistributedCacheEntryOptions { AbsoluteExpirationRelativeToNow = expirationTime });
         }
-            
+
     }
 
     public virtual async Task<bool> IsTaskRunningAsync(string key)

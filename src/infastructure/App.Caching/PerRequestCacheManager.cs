@@ -6,10 +6,10 @@ using Microsoft.Extensions.Options;
 namespace App.Caching;
 
 public class PerRequestCacheManager(
-    
+
     IOptions<CacheConfig> cacheConfig,
     ICacheKeyFactory cacheKeyFactory
-    
+
     ) : CacheKeyService(cacheConfig), IShortTermCacheManager
 
 {

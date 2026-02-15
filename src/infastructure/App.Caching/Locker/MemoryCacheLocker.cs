@@ -38,9 +38,9 @@ public class MemoryCacheLocker(
                     await action(tokenSource.Token);
             }
         }
-        catch (OperationCanceledException) 
-        { 
-        
+        catch (OperationCanceledException)
+        {
+
         }
         finally
         {
