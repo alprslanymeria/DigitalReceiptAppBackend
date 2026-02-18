@@ -1,5 +1,7 @@
+using App.Application.Contracts.Infrastructure.Receipt;
 using App.Application.Contracts.Services;
 using App.Integration;
+using App.Integration.Receipt;
 
 namespace App.API.Extensions;
 
@@ -14,6 +16,11 @@ public static class ServiceExtension
     {
         // COMMON HANDLER SERVICES
         services.AddScoped<IFileStorageHelper, FileStorageHelper>();
+
+        // RECEIPT PROCESSING STRATEGIES (STRATEGY PATTERN)
+        services.AddScoped<IReceiptProcessingStrategy, OcrReceiptProcessingStrategy>();
+        services.AddScoped<IReceiptProcessingStrategy, QrReceiptProcessingStrategy>();
+        services.AddScoped<IReceiptStrategyResolver, ReceiptStrategyResolver>();
 
         return services;
     }

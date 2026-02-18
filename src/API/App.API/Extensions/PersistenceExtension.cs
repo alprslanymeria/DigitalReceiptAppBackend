@@ -1,6 +1,8 @@
 using App.Application.Contracts.Persistence;
+using App.Application.Contracts.Persistence.Repositories;
 using App.Persistence;
 using App.Persistence.Interceptors;
+using App.Persistence.Repositories;
 
 namespace App.API.Extensions;
 
@@ -28,6 +30,10 @@ public static class PersistenceExtension
 
         // UNIT OF WORK
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+        // REPOSITORIES
+        services.AddScoped<IReceiptRepository, ReceiptRepository>();
+        services.AddScoped<IAIAnalysisRepository, AIAnalysisRepository>();
 
         return services;
     }

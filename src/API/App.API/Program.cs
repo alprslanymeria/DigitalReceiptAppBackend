@@ -6,6 +6,7 @@ using App.API.ModelBinding;
 using App.Application;
 using App.Application.Common.Behaviors;
 using App.Caching;
+using App.Integration;
 using App.Integration.ExternalApi;
 using App.Integration.Mapping;
 using App.Observability;
@@ -67,6 +68,7 @@ builder.Services
     .AddCustomTokenAuthExt(builder.Configuration)
     .AddApplicationServicesExt()
     .AddExternalApiServicesExt(builder.Configuration)
+    .AddReceiptServicesExt(builder.Configuration)
     .AddApiVersioningExt()
     .AddRateLimitingExt();
 
