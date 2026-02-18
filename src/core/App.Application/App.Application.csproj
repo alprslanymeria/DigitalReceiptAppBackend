@@ -12,8 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Common\CacheKeys\" />
-    <Folder Include="Contracts\Persistence\Repositories\" />
-    <Folder Include="Features\" />
   </ItemGroup>
 
   <ItemGroup>
